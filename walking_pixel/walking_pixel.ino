@@ -199,7 +199,7 @@ void controllerlog() {
 }
 
 void loop() {
-    handleStickInput();
+    handleSerialInput();
     updatePixelPositon();
     if (direction) {
       changeColor();  
