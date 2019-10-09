@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:uno",
+    "sketch": "brainy_bits_example.ino",
+    "port": "/dev/ttyACM0"
+}
