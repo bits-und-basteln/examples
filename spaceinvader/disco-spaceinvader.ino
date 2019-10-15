@@ -15,17 +15,6 @@ Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ80
 
 int delayval = 500; // delay for half a second
 
-bool invader[8][11] = {
-  {false, false, true, false, false, false, false, false, true, false, false},
-  {false, false, false, true, false, false, false, true, false, false, false},
-  {false, false, true, true, true, true, true, true, true, false, false},
-  {false, true, true, false, true, true, true, false, true, true, false},
-  {true, true, true, true, true, true, true, true, true, true, true},
-  {true, false, true, true, true, true, true, true, true, false, true},
-  {true, false, true, false, false, false, false, false, true, false, true},
-  {false, false, false, true, true, false, true, true, false, false, false}
-  };
-
 void setup() {
 #if defined (__AVR_ATtiny85__)
   if (F_CPU == 16000000) clock_prescale_set(clock_div_1);
@@ -37,32 +26,30 @@ void setup() {
 
 void loop() {
 
-    bool foo[16][16] = {
-      {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true},
-      {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true},
-      {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true},
-      {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true},
-      {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true},
-      {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true},
-      {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true},
-      {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true},
-      {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true},
-      {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true},
-      {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true},
-      {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true},
-      {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true},
-      {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true},
-      {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true},
-      {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true}
-    };
-    int r = 50;
-    int g = 50;
-    int b = 50;
+    bool invader[8][11] = {
+      {false, false, true, false, false, false, false, false, true, false, false},
+      {false, false, false, true, false, false, false, true, false, false, false},
+      {false, false, true, true, true, true, true, true, true, false, false},
+      {false, true, true, false, true, true, true, false, true, true, false},
+      {true, true, true, true, true, true, true, true, true, true, true},
+      {true, false, true, true, true, true, true, true, true, false, true},
+      {true, false, true, false, false, false, false, false, true, false, true},
+      {false, false, false, true, true, false, true, true, false, false, false}
+      };
 
+    int r = random(20);
+    int g = random(20);
+    int b = random(20);
+    
+    bool leds[16][16] = {true};
 
-    showMonochromeArray(foo, r, g, b);
+    for (int x = 0; x < 8; x++) {
+      for (int y = 0; y < 11; y++)
+      leds[x][y] = invader[x][y];
+    }
+
+    showMonochromeArray(leds2, r, g, b);
     delay(500);
-
 }
 
 void showMonochromeArray(bool leds[16][16], int r, int g, int b) {
