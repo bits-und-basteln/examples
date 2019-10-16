@@ -8,7 +8,7 @@ class Stamp
 {
   public:
     Stamp(int dimX, int dimY);
-    bool * getPoint(int x, int y);
+    virtual bool getPoint(int x, int y);
     int getDimX();
     int getDimY();
   protected:

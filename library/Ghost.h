@@ -5,7 +5,7 @@
 #include <avr/pgmspace.h>
 #include "Stamp.h"
 
-const bool GhostData[] PROGMEM =
+const bool GhostData[] =
 {
   false, true, true, true, false, 
   true, true, true, true, true,
@@ -21,8 +21,8 @@ class Ghost: public Stamp
     Ghost() 
     :Stamp(5, 6) {
     };
-    bool * getPoint(unsigned x, unsigned y) const {
-        return pgm_read_byte(&(GhostData[indexOf(x, y)]));
+    bool getPoint(int x, int y) override {
+        return GhostData[indexOf(x, y)];
     };
 };
 
