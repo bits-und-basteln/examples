@@ -3,7 +3,7 @@
 
 #include "Arduino.h"
 #include <avr/pgmspace.h>
-#include "Stamp.h"
+#include "../Stamp.h"
 
 const bool GhostData[] =
 {

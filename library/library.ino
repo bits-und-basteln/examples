@@ -1,5 +1,5 @@
 #include "Canvas.h"
-#include "Ghost.h"
+#include "images/Ghost.h"
 
 Canvas canvas;
 Ghost ghost;
@@ -10,7 +10,7 @@ void setup() {}
 
 void loop() {
     canvas.clear();
-    canvas.draw(&ghost, 0xffffff, i, i);
+    canvas.draw(&ghost, 0xff00ef, i, i);
     canvas.show();
     delay(500);
     i++;
