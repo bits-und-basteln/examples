@@ -3,18 +3,18 @@
         {
             "name": "Linux",
             "includePath": [
+                "/home/cb/Arduino/libraries/FastLED",
                 "/home/cb/arduino/tools/**",
                 "/home/cb/arduino/hardware/arduino/avr/**",
-                "${workspaceFolder}/**"
+                "/home/cb/arduino/hardware/tools/avr/**"
             ],
-            "defines": [],
-            "compilerPath": "/usr/bin/gcc",
-            "cStandard": "c11",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64",
             "forcedInclude": [
                 "/home/cb/arduino/hardware/arduino/avr/cores/arduino/Arduino.h"
-            ]
+            ],
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
         }
     ],
     "version": 4
