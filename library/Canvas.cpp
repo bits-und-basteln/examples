@@ -1,5 +1,6 @@
 #include "Arduino.h"
 #include "Canvas.h"
+#include "Stamp.h"
 #include <avr/pgmspace.h>  // Needed to store stuff in Flash using PROGMEM
 #include "FastLED.h"       // Fastled library to control the LEDs
 
@@ -23,6 +24,20 @@ void Canvas::show() {
 
 void Canvas::clear() {
     FastLED.clear();
+}
+
+void Canvas::setBrightness(int brightness) {
+    FastLED.setBrightness(brightness);
+}
+
+void Canvas::draw(Stamp stamp, long color, int x, int y) {
+    for (int i = 0; i < stamp.getDimX(); i++) {
+        for (int j = 0; j < stamp.getDimY(); j++) {
+            if (stamp.getPoint(i, j)) {
+              pixel(i + x, j + y, color);
+            }
+        }
+    }
 }
 
 void Canvas::pixel(int x, int y, long color) {
