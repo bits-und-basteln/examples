@@ -1,7 +1,7 @@
 #include "Monsters.h"
 #include "Stamp.h"
 
-const long Ghost[] =
+const bool Ghost[] PROGMEM =
 {
   false, true, true, true, false, 
   true, true, true, true, true,

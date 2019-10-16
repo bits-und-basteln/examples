@@ -1,6 +1,7 @@
 #include "Stamp.h"
+#include <avr/pgmspace.h>
 
-Stamp::Stamp(bool points[], unsigned dimX, unsigned dimY) {
+Stamp::Stamp(const bool points[], unsigned dimX, unsigned dimY) {
     _dimX = dimX;
     _dimY = dimY;
     _points = points;
@@ -15,5 +16,5 @@ unsigned Stamp::getDimY() {
 }
 
 bool Stamp::getPoint(unsigned x, unsigned y) {
-    return _points[(_dimX * y) + x];
+    return pgm_read_dword(_points[(_dimX * y) + x]);
 }
