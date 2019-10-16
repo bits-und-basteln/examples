@@ -48,7 +48,7 @@ void Canvas::pixel(int x, int y, long color) {
     y = y%16;
   }
   int i;
-  if (x%2 == 0) {
+  if (x%2 != 0) {
     i = (x * 16) + (15 - y);
   } else {
     i = (x * 16) + y;
