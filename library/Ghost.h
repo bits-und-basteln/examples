@@ -3,6 +3,7 @@
 
 #include "Arduino.h"
 #include <avr/pgmspace.h>
+#include "Stamp.h"
 
 const bool GhostData[] PROGMEM =
 {
@@ -14,18 +15,14 @@ const bool GhostData[] PROGMEM =
   true, false, true, false, true
 };
 
-class Ghost
+class Ghost: public Stamp
 {
   public:
-    Ghost() {};
-    bool getPoint(unsigned x, unsigned y) const {
-        return pgm_read_byte(&(GhostData[(5 * y) + x]));
+    Ghost() 
+    :Stamp(5, 6) {
     };
-    unsigned getDimX() const {
-        return 5;
-    };
-    unsigned getDimY() const {
-        return 6;
+    bool * getPoint(unsigned x, unsigned y) const {
+        return pgm_read_byte(&(GhostData[indexOf(x, y)]));
     };
 };
 

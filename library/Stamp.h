@@ -7,14 +7,15 @@
 class Stamp
 {
   public:
-    Stamp(const bool points[], unsigned dimX, unsigned dimY);
-    bool getPoint(unsigned x, unsigned y);
-    unsigned getDimX();
-    unsigned getDimY();
+    Stamp(int dimX, int dimY);
+    bool * getPoint(int x, int y);
+    int getDimX();
+    int getDimY();
+  protected:
+    int indexOf(int x, int y);
   private:
-    unsigned _dimX;
-    unsigned _dimY;
-    const bool *_points;
+    int _dimX;
+    int _dimY;
 };
 
 #endif
