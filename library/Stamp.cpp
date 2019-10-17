@@ -6,10 +6,6 @@ Stamp::Stamp(int dimX, int dimY) {
     _dimY = dimY;
 }
 
-bool Stamp::getPoint(int x, int y) {
-    return true;
-}
-
 int Stamp::getDimX() {
     return _dimX;
 }
