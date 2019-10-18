@@ -1,4 +1,4 @@
-#include "BitsUndBasteln.h"
+#include <BitsUndBasteln.h>
 
 Canvas canvas;
 Ghost ghost;
