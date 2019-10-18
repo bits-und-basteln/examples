@@ -9,7 +9,7 @@ void setup() {}
 
 void loop() {
     canvas.clear();
-    canvas.draw(&ghost, 0xff00ef, i, i);
+    canvas.draw(&ghost, i, i, CYAN);
     canvas.show();
     delay(500);
     i++;

@@ -12,7 +12,7 @@ class Canvas
     Canvas();
     void setBrightness(int brightness);
     void pixel(int x, int y, long color);
-    void draw(Stamp *stamp, long color, int x, int y);
+    void draw(Stamp *stamp, int x, int y, long color);
     void show();
     void clear();
 };

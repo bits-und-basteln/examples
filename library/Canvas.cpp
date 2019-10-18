@@ -26,7 +26,7 @@ void Canvas::setBrightness(int brightness) {
   FastLED.setBrightness(brightness);
 }
 
-void Canvas::draw(Stamp *stamp, long color, int x, int y) {
+void Canvas::draw(Stamp *stamp, int x, int y, long color) {
   for (int i = 0; i < stamp->getDimX(); i++) {
     for (int j = 0; j < stamp->getDimY(); j++) {
       if (stamp->getPoint(i, j)) {

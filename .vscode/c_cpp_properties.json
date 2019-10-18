@@ -6,7 +6,8 @@
                 "/home/cb/Arduino/libraries/FastLED",
                 "/home/cb/arduino/tools/**",
                 "/home/cb/arduino/hardware/arduino/avr/**",
-                "/home/cb/arduino/hardware/tools/avr/**"
+                "/home/cb/arduino/hardware/tools/avr/**",
+                "/home/cb/projects/coding-school/examples/library/**"
             ],
             "forcedInclude": [
                 "/home/cb/arduino/hardware/arduino/avr/cores/arduino/Arduino.h"

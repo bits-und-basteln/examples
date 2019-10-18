@@ -3,5 +3,6 @@
 
 #include "Canvas.h"
 #include "images/Images.h"
+#include "Colors.h"
 
 #endif
