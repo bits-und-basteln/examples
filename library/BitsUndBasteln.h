@@ -2,6 +2,6 @@
 #define BitsUndBasteln_h
 
 #include "Canvas.h"
-#include "images/Ghost.h"
+#include "images/Images.h"
 
 #endif

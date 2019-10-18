@@ -2,7 +2,7 @@
 #define Hat_h
 
 #include <avr/pgmspace.h>
-#include "../stamp/Stamp.h"
+#include "../Stamp.h"
 
 const bool HatData[] PROGMEM =
 {
