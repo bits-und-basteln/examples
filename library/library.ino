@@ -1,5 +1,4 @@
-#include "Canvas.h"
-#include "images/Ghost.h"
+#include "BitsUndBasteln.h"
 
 Canvas canvas;
 Ghost ghost;
