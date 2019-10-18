@@ -4,7 +4,7 @@
 #include "Arduino.h"
 #include <avr/pgmspace.h>  // Needed to store stuff in Flash using PROGMEM
 #include "FastLED.h"       // Fastled library to control the LEDs
-#include "Stamp.h"
+#include "../stamp/Stamp.h"
 
 class Canvas
 {

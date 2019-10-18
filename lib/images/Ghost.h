@@ -1,9 +1,8 @@
 #ifndef Ghost_h
 #define Ghost_h
 
-#include "Arduino.h"
 #include <avr/pgmspace.h>
-#include "../Stamp.h"
+#include "../stamp/Stamp.h"
 
 const bool GhostData[] PROGMEM =
 {
