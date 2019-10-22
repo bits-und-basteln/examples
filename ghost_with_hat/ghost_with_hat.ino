@@ -2,7 +2,7 @@
 
 void setup(){};
 
-long GHOST_COLOR = CYAN;
+long GHOST_COLOR = WHITE;
 long HAT_COLOR = MAGENTA;
 long EYE_COLOR = 0xcc0000;
 
