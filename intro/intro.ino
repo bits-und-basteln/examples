@@ -3,7 +3,7 @@
 void setup(){};
 
 long GHOST_COLOR = WHITE;
-long HAT_COLOR = MAGENTA;
+long HAT_COLOR = RED;
 long EYE_COLOR = 0xcc0000;
 
 void loop(){

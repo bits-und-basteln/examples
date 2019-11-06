@@ -15,7 +15,7 @@ CRGB leds[NUM_LEDS];
 Canvas::Canvas() {
   FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds,
                                       NUM_LEDS);  // Init of the Fastled library
-  FastLED.setBrightness(10);
+  FastLED.setBrightness(13);
 }
 
 void Canvas::show() { FastLED.show(); }

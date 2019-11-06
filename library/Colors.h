@@ -1,13 +1,15 @@
 #ifndef Colors_h
 #define Colors_h
 
-#define BLACK 0x0000
-#define BLUE 0x001F
-#define RED 0xF800
-#define GREEN 0x07E0
-#define CYAN 0x07FF
-#define MAGENTA 0xF81F
-#define YELLOW 0xFFE0
-#define WHITE 0xFFFF
+#define BLACK 0x000000
+#define BLUE 0x0000FF
+#define RED 0xFF0000
+#define LIME 0x00FF00
+#define GREEN 0x008000
+#define CYAN 0x00FFFF
+#define PURPLE 0x800080
+#define YELLOW 0xFFFF00
+#define WHITE 0xFFFFFF
+#define MAGENTA 0xFF00FF
 
 #endif
