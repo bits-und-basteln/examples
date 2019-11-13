@@ -4,8 +4,6 @@
 #include <BitsUndBasteln.h>
 
 Canvas canvas;
-Ghost ghost;
-Hat hat;
 
 void drawGhost(int x, int y, long color) {
     canvas.draw(&ghost, x, y, color);

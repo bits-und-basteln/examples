@@ -7,15 +7,16 @@
 class Stamp
 {
   public:
-    Stamp(int dimX, int dimY);
-    virtual bool getPoint(int x, int y) = 0;
+    Stamp(int dimX, int dimY, const bool* pattern);
+    bool getPoint(int x, int y);
     int getDimX();
     int getDimY();
   protected:
     int indexOf(int x, int y);
   private:
-    int _dimX;
-    int _dimY;
+    int dimX;
+    int dimY;
+    const bool* pattern;
 };
 
 #endif
